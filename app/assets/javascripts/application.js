@@ -9,3 +9,4 @@
 //= require twitter/bootstrap
 //= require_tree .
 //= require stocks
+//= require confirm

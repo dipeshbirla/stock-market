@@ -3,3 +3,4 @@ $(document).ready(function(){
     $('.look-up-a-stock').prop('disabled', true);
   });
 });
+

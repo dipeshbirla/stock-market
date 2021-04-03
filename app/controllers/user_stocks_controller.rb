@@ -46,6 +46,7 @@ class UserStocksController < ApplicationController
 
     respond_to do |format|
       if @user_stock.save
+        ExampleMailer.sample_email.deliver
         format.html do
           msg = "Stock #{@user_stock.stock.ticker} stock was successfully added"
           redirect_to my_portfolio_path, notice: msg
