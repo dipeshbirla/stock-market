@@ -1,0 +1,13 @@
+name: Rails tests
+on: [push,pull_request]
+jobs:
+  rubocop-test:
+    name: Rubocop
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Install Rubocop
+        run: gem install rubocop
+        with:
+          ruby-version: ${{ env.RUBY_VERSION }}
+      - name: Check code
+        run: rubocop
